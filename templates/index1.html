@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <header class="header">
+   
+    <form action="/convert" method="post">
+      <h1 class="heading-main">Welcome To Currency Convertor App
+      </h1>
+      <input type="amount" name="amount" id="amount" placeholder="enter the amount to convert " /><br>
+      <label for="From">From:</label>
+      <select name="change_from" id="change_from">
+        <option value="">--Select--</option>
+        <option value="INR">INR-India</option>
+        <option value="EUR">EUR-EU</option>
+        <option value="KWD">KWD-Kuwait</option>
+        <option value="USD">USD-USA</option>
+        <option value="JPY">JPY-Japan</option>
+        <option value="AUD">AUD-Australia</option>
+        <option value="CAD">CAD-Canda</option>
+        <option value="CHF">CHF-Swwitzrland</option>
+        <option value="TRY">TRY-Turkey</option>
+        <option value="MXN">MXN-Mexican</option>
+        <option value="IQD">IQD-Iraq</option>
+      </select><br>
+      <label for="To">To:</label>
+      <select name="change_to" id="change_to">
+        <option value="">--Select--</option>
+        <option value="INR">INR-India</option>
+        <option value="EUR">EUR-EU</option>
+        <option value="KWD">KWD-Kuwait</option>
+        <option value="USD">USD-USA</option>
+        <option value="JPY">JPY-Japan</option>
+        <option value="AUD">AUD-Australia</option>
+        <option value="CAD">CAD-Canda</option>
+        <option value="CHF">CHF-Swwitzrland</option>
+        <option value="TRY">TRY-Turkey</option>
+        <option value="MXN">MXN-Mexican</option>
+        <option value="IQD">IQD-Iraq</option>
+      </select><br>
+      
+      <button type="submit">Convert</button>
+      <div class="result">
+        {{result}}
+      </div>
+      
+    </form>
+
+  
+  </header>
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
